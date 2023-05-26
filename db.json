@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "item1",
+      "description": "item1 description",
+      "price": "$100"
+    },
+    {
+      "id": 2,
+      "name": "item2",
+      "description": "item2 description",
+      "price": "$200"
+    },
+    {
+      "id": 3,
+      "name": "item3",
+      "description": "item3 description",
+      "price": "$300"
+    },
+    {
+      "name": "CocaCola",
+      "description": "A can of soda",
+      "price": "$1.25",
+      "id": 4
+    }
+  ]
+}
