@@ -1,7 +1,8 @@
 import React, {useState} from "react";
+import ItemCard from "./ItemCard";
 
 
-function Items({items}){
+function Items({items, setCart, cart}){
     const [searchWord, setSearchWord] = useState("")
     const [category, setCategory] = useState("name")
     const [isAlphaBetized, setIsAlphaBetized] = useState(false)
@@ -29,13 +30,7 @@ function Items({items}){
     const mappedItems = sortedItems.map((item) => {
 
         if(item[category].toLowerCase().includes(searchWord.toLowerCase())){
-            return(
-                <React.Fragment key={item.id}>
-                    <h2>{item.name}</h2>
-                    <p>{item.description}</p>
-                    <p>{item.price}</p>
-                </React.Fragment>
-            )
+            return <ItemCard key={item.id} item={item} setCart={setCart} cart={cart}/>
         }
 
         return null

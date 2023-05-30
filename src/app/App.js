@@ -13,10 +13,9 @@ import "./App.css";
 import { RouterProvider, Routes, Route, createBrowserRouter } from 'react-router-dom';
 import Items from "../components/Items";
 import ItemForm from "../components/ItemForm";
-
-
-
-
+import NavBar from "../components/NavBar";
+import Cart from "../components/Cart";
+import Counter from "../components/Counter";
 
 // const router = createBrowserRouter();
   
@@ -24,6 +23,8 @@ import ItemForm from "../components/ItemForm";
 
 function App() {
   const [items, setItems] = useState([])
+  const [cart, setCart] = useState([])
+
   
   useEffect(() => {
     fetch("http://localhost:3000/items")
@@ -35,25 +36,22 @@ function App() {
     setItems([...items, newItem])
   }
 
-  /**
-   * 1. Created a Component called Items, need props of items: 
-   *    a. Mapped over the items and displayed them 
-   * 
-   * 2. Created a Form that will add news items to our state when we submit the new item
-   *    a. State to keep track of the data from the form
-   *    b. Callback function to add the new item to the original state
-   * 
-   */
+  
+
 
   return (
     <>
+    <NavBar cart={cart}/>
     <Routes>
       <Route path="/" element={
-        <Items items={items}/>
+        // <Items items={items} setCart={setCart} cart={cart}/>
+        <Counter />
         } />
         <Route path="/newItem" element={
           <ItemForm handleAddItem={handleAddItem}/>
         }/>
+        <Route path="/cart" element={<Cart cart={cart}/>
+        } />
     </Routes>
 
       

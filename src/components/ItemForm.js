@@ -34,13 +34,18 @@ function ItemForm({handleAddItem}){
 
     
     return(
-        <form onSubmit={handleSubmit}>
-            <h1>Item Form</h1>
-            <input  name="name" value={formData.name} onChange={handleChange}/>
-            <input name="description" value={formData.description} onChange={handleChange}/>
-            <input name="price" value={formData.price} onChange={handleChange}/>
-            <button type="submit">Add Item</button>
+
+        <form onSubmit={handleSubmit} >
+            <input type="text" value={formData.name} onChange={(e) => handleChange(e.target.value)}/>
+            <button ></button>
         </form>
+        // <form onSubmit={handleSubmit}>
+        //     <h1>Item Form</h1>
+        //     <input  name="name" value={formData.name} onChange={handleChange}/>
+        //     <input name="description" value={formData.description} onChange={handleChange}/>
+        //     <input name="price" value={formData.price} onChange={handleChange}/>
+        //     <button type="submit">Add Item</button>
+        // </form>
     )
 }
 
