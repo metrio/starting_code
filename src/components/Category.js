@@ -10,6 +10,7 @@ export default function Category () {
 
   const { name } = useParams()
 
+
   return (
     <div>
       <h2>Articles Related to {name}</h2>

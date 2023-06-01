@@ -1,3 +1,7 @@
+# Introduction
+This project is for the intention of having repetitive uses for Review Sessions for Students to work with when we have discussions on React Concepts.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
