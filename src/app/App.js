@@ -36,26 +36,19 @@ function App() {
     setItems([...items, newItem])
   }
 
-  
-
 
   return (
     <>
     <NavBar cart={cart}/>
     <Routes>
       <Route path="/" element={
-        // <Items items={items} setCart={setCart} cart={cart}/>
-        <Counter />
+        <Items items={items} setCart={setCart} cart={cart} />
         } />
-        <Route path="/newItem" element={
-          <ItemForm handleAddItem={handleAddItem}/>
-        }/>
-        <Route path="/cart" element={<Cart cart={cart}/>
-        } />
+      <Route path="/newItem" element={
+        <ItemForm handleAddItem={handleAddItem}/>
+      }/>
+      <Route path="/cart" element={<Cart cart={cart}/>} />
     </Routes>
-
-      
-      
     </>
   );
 }
